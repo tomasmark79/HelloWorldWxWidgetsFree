@@ -1,9 +1,5 @@
 # HeloWorldWxWidgets
 
-[![Linux](https://github.com/tomasmark79/HelloWorldWxWidgetsFree/actions/workflows/linux.yml/badge.svg)](https://github.com/tomasmark79/HelloWorldWxWidgetsFree/actions/workflows/linux.yml)
-[![MacOS](https://github.com/tomasmark79/HelloWorldWxWidgetsFree/actions/workflows/macos.yml/badge.svg)](https://github.com/tomasmark79/HelloWorldWxWidgetsFree/actions/workflows/macos.yml)
-[![Windows](https://github.com/tomasmark79/HelloWorldWxWidgetsFree/actions/workflows/windows.yml/badge.svg)](https://github.com/tomasmark79/HelloWorldWxWidgetsFree/actions/workflows/windows.yml)  
-
 ![alt text](assets/screenshot.png)
 
 ---
