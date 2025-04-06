@@ -156,7 +156,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 # ==============================================================================
 target_link_libraries(
     ${LIBRARY_NAME}
-    PRIVATE fmt::fmt
+    PUBLIC fmt::fmt
     # PRIVATE ZLIB::ZLIB
     # PRIVATE nlohmann_json::nlohmann_json
     # PRIVATE yaml-cpp

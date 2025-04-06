@@ -2,7 +2,6 @@
 // Copyright (c) 2024-2025 Tomáš Mark
 
 #include <WxWidgetsAdapter/WxWidgetsAdapter.hpp>
-#include <WxWidgetsAdapter/version.h>
 #include <Logger/Logger.hpp>
 #include <Utils/Utils.hpp>
 
@@ -74,20 +73,21 @@ bool MyApp::OnInit ()
   return true;
 }
 
-namespace library
-{
+namespace dotname {
 
-  WxWidgetsAdapter::WxWidgetsAdapter (const std::string &assetsPath)
-    : m_assetsPath (assetsPath)
-  {
-    LOG_INFO ("WxWidgetsAdapter v." + std::string (WXWIDGETSADAPTER_VERSION)
-              + " constructed.");
-    LOG_DEBUG ("Assets Path: " + this->m_assetsPath);
+  WxWidgetsAdapter::WxWidgetsAdapter () {
+    LOG_D_STREAM << libName_ << " ...constructed" << std::endl;
+  }
+  WxWidgetsAdapter::WxWidgetsAdapter (const std::filesystem::path& assetsPath) : WxWidgetsAdapter () {
+    assetsPath_ = assetsPath;
+    if (!assetsPath_.empty ()) {
+      LOG_D_STREAM << "Assets path: " << assetsPath_ << std::endl;
+    } else {
+      LOG_D_STREAM << "Assets path is empty" << std::endl;
+    }
+  }
+  WxWidgetsAdapter::~WxWidgetsAdapter () {
+    LOG_D_STREAM << libName_ << " ...destructed" << std::endl;
   }
 
-  WxWidgetsAdapter::~WxWidgetsAdapter ()
-  {
-    LOG_DEBUG ("WxWidgetsAdapter deconstructed.");
-  }
-
-} // namespace library
+} // namespace dotname
